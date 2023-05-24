@@ -72,31 +72,6 @@ li {
     border: none;
 }
 
-
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: rgb(47, 102, 252);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
-#myBtn:hover {
-    background-color: #555;
-    /* Add a dark-grey background on hover */
-}
-
-
 .side-by-side {
     display: flex;
     justify-content: center;
@@ -158,4 +133,105 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .side-by-side {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .side-by-side img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .side-by-side .extext {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .side-by-side .eximage {
+        text-align: center;
+        margin-top: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .side-by-side:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+
+    #desktopContent {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .side-by-side {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .side-by-side:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .side-by-side img {
+        flex: 0 0 50%;
+        margin-right: 20px;
+    }
+
+    .side-by-side .extext {
+        flex: 0 0 50%;
+        text-align: left;
+    }
+
+    #mobileContent {
+        display: none;
+    }
+}
+
+#desktopContent {
+    padding: 0;
+}
+
+#mobileContent {
+    padding: 0;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #8d8c8c;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 9999;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    opacity: 1;
+    /* Add a dark-grey background on hover */
 }
